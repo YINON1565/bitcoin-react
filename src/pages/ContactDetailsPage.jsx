@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 import { ContactService } from '../services/ContactService'
 
 export default class ContactDetailsPage extends Component {
@@ -12,6 +14,8 @@ export default class ContactDetailsPage extends Component {
         this.setState({ contact });
     }
 
+    
+
     render() {
         const { contact } = this.state
         if (!contact) {
@@ -20,6 +24,12 @@ export default class ContactDetailsPage extends Component {
 
         return (
             <div>
+                <Link to="/contact">
+                    <button >Go to list</button>
+                </Link>
+                <Link to={'/contact/edit/' + contact._id}>
+                    <button >Edit contact</button>
+                </Link>
                 <img
                     src={`https://robohash.org/${contact.name}.png`}
                     alt=""

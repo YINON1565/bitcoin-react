@@ -8,7 +8,7 @@ function store(key, val) {
 }
 
 
-export const storageService = {
+export const StorageService = {
     load,
     store
 

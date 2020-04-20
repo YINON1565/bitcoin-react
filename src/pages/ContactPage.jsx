@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 import { ContactService } from '../services/ContactService'
 
 import ContactList from '../cmps/ContactList'
@@ -37,6 +39,9 @@ export default class ContactPage extends Component {
                     onFilter={this.onFilterHandler}
                 />
                 <ContactList contacts={contacts} />
+                <Link to="/contact/edit">
+                    <button >Add new contact</button>
+                </Link>
             </div>
         )
     }

@@ -72,7 +72,7 @@ function sort(arr) {
     })
   }
 
-export const utilService = {
+export const UtilService = {
     getRandomInt,
     makeLorem,
     makeId,

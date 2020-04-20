@@ -1,6 +1,7 @@
-import { utilService } from "./UtilService";
+import { UtilService } from "./UtilService";
+import { StorageService } from "./StorageService";
 
-const contacts = [
+const CONTACTS_DB = [
   {
     "_id": "5a56640269f443a5d64b32ca",
     "name": "Ochoa Hyde",
@@ -117,30 +118,35 @@ const contacts = [
     "phone": "+1 (842) 587-3812"
   }
 ];
-
+const KEY_CONTACTS = 'contacts'
 
 function getContacts (filterBy = null) {
   return new Promise((resolve, reject) => { 
-    var contactsToReturn = contacts;
+    const contacts = StorageService.load(KEY_CONTACTS)
+    var contactsToReturn = (contacts)? contacts: CONTACTS_DB;
+    StorageService.store(KEY_CONTACTS, contactsToReturn)
     if (filterBy && filterBy.term) {
       contactsToReturn = filter(filterBy.term)
     }
-    resolve(utilService.sort(contactsToReturn))
+    resolve(UtilService.sort(contactsToReturn))
   })
 }
 
 function getContactById (id) {
     return new Promise((resolve, reject) => {
+      const contacts = StorageService.load(KEY_CONTACTS)
       const contact = contacts.find( contact => contact._id === id)
       contact ? resolve(contact) : reject(`Contact id ${id} not found!`)
     })
 }
 
-function deleteContact(id) {
+function removeContact(id) {
   return new Promise((resolve, reject) => { 
+    const contacts = StorageService.load(KEY_CONTACTS)
     const index = contacts.findIndex( contact => contact._id === id)
     if (index !== -1) {
       contacts.splice(index, 1)
+      StorageService.store(KEY_CONTACTS, contacts)
     }
 
     resolve(contacts)
@@ -149,9 +155,11 @@ function deleteContact(id) {
 
 function _updateContact(contact) {
   return new Promise((resolve, reject) => { 
+    const contacts = StorageService.load(KEY_CONTACTS)
     const index = contacts.findIndex( c => contact._id === c._id)
     if (index !== -1) {
       contacts[index] = contact
+      StorageService.store(KEY_CONTACTS, contacts)
     }
     resolve(contact)
   })
@@ -159,8 +167,10 @@ function _updateContact(contact) {
 
 function _addContact(contact) {
   return new Promise((resolve, reject) => { 
-    contact._id = utilService.makeId(10)
+    const contacts = StorageService.load(KEY_CONTACTS)
+    contact._id = UtilService.makeId(10)
     contacts.push(contact)
+    StorageService.store(KEY_CONTACTS, contacts)
     resolve(contact)
   })
 }
@@ -178,6 +188,7 @@ function getEmptyContact() {
 }
 
 function filter (term) {
+  const contacts = StorageService.load(KEY_CONTACTS)
   term = term.toLocaleLowerCase()
   return contacts.filter( contact => {
     return contact.name.toLocaleLowerCase().includes(term) ||
@@ -189,7 +200,7 @@ function filter (term) {
 export const ContactService = {
   getContacts,
   getContactById,
-  deleteContact,
+  removeContact,
   saveContact,
   getEmptyContact
 }

@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: lighten($clr1, 15%);
+    color: lighten($clr2, 25%);
+}
+
+html {
+    scroll-behavior: smooth;
+    // font-family: Montserrat, sans-serif;
+    // color: $clr2;
+    // text-align: center;
+    // line-height: 1.9;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // background-color: lighten($clr2, 20%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    // font-family: Montserrat;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+p {
+    font-family: sen;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+.strong {
+    font-weight: bolder;
+}
+
+.btn-img {
+    width: 30px;
+    cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select {
+    // font-family: Montserrat;
+    border: none;
+    border-radius: 3px;
+    // box-shadow: $shadow1;
+    // background-color: lighten($clr2, 30%);
+    font-size: rem(20px);
+    font-weight: 400;
+    // transition: background-color .3s;
+    &:hover {
+        // background-color: lighten($clr3, 20%);
+    }
+}
+
+textarea {
+    resize: none;
+    font-size: rem(16px);
+}
+
+button,
+select {
+    cursor: pointer;
+    // background-color: lighten($clr2, 21%);
+}

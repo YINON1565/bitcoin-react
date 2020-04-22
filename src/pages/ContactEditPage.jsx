@@ -23,6 +23,7 @@ export default class ContactEditPage extends Component {
                 },
             };
         });
+
     };
 
     saveContact = async _ => {
@@ -41,32 +42,39 @@ export default class ContactEditPage extends Component {
     }
     render() {
         const { name, email, phone } = this.state.contact;
-        const btnDelete = (this.state.contact._id) ? <button onClick={() => this.onRemoveContantHandler(this.state.contact._id)}>Delete Contant</button> : '';
         return (
-            <div>
-                {btnDelete}
-                <button onClick={this.onGoBack}>Go Back</button>
+            <div className="contact-edit width-container flex a-center evenly">
+                <div className="btn-side-container flex a-center bet">
+                    <img onClick={this.onGoBack} src={require('../assets/svg/go-back.svg')} alt="↻" title="Go Back" />
+                    {
+                        (this.state.contact._id) ?
+                        <img onClick={() => this.onRemoveContantHandler(this.state.contact._id)} src={require('../assets/svg/bin.svg')} alt="🗑" title="Delete Contant" />
+                        : ''
+                    }
+                </div>
                 <img
+                    className="avatar avatar-l"
                     src={`https://robohash.org/${name}.png`}
                     alt=""
                 />
-                <Input
-                    value={name}
-                    name="name"
-                    onInput={this.onInputHandler}
-                />
-                <Input
-                    value={email}
-                    name="email"
-                    onInput={this.onInputHandler}
-                />
-                <Input
-                    value={phone}
-                    name="phone"
-                    onInput={this.onInputHandler}
-                />
-                <button onClick={this.saveContact}>Save</button>
-                {/* </form> */}
+                <div className="input-containet">
+                    <Input
+                        value={name}
+                        name="name"
+                        onInput={this.onInputHandler}
+                    />
+                    <Input
+                        value={email}
+                        name="email"
+                        onInput={this.onInputHandler}
+                    />
+                    <Input
+                        value={phone}
+                        name="phone"
+                        onInput={this.onInputHandler}
+                    />
+                    <button onClick={this.saveContact}>Save</button>
+                </div>
             </div>
         )
     }

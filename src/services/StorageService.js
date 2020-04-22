@@ -5,6 +5,7 @@ function load(key) {
 
 function store(key, val) {
     localStorage[key] = JSON.stringify(val);
+    // return JSON.parse(val)
 }
 
 

@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage'
 import ContactDetailsPage from './pages/ContactDetailsPage'
 import ContactEditPage from './pages/ContactEditPage'
 import StatisticPage from './pages/StatisticPage'
+import SignupPage from './pages/SignupPage'
 
 import NavBar from './cmps/NavBar'
 
@@ -18,9 +19,9 @@ const history = createBrowserHistory();
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header"> */}
+      <header className="App-header">
       <Router history={history}>
-        <NavBar />
+        <NavBar/>
         <main>
           <Switch>
             <Route path="/" exact component={HomePage} />
@@ -28,10 +29,11 @@ function App() {
             <Route path="/contact/edit/:id?" component={ContactEditPage} />
             <Route path="/contact/:id" component={ContactDetailsPage} />
             <Route path="/statistic" component={StatisticPage} />
+            <Route path="/signup" component={SignupPage} />
           </Switch>
         </main>
       </Router>
-      {/* </header> */}
+      </header>
     </div>
   );
 }

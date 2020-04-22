@@ -1,0 +1,27 @@
+.contact-preview {
+    background-color: $clr2;
+    transition: background-color .3s;
+    padding: rem(7px);
+    border-radius: 3px;
+    &:hover {
+        background-color: $clr3;
+        .avatar {
+            background-color: $clr2;
+        }
+    }
+
+    ul {
+        margin: auto 2ch ;
+        li {
+          color: lighten($clr1, 50%);
+          font-size: 14px;
+          line-height: 2.6ch;
+        }
+
+        li:first-child{
+            font-weight: 600;
+            font-size: 20px;
+            color: lighten($clr1, 85%);
+        }
+    }
+}

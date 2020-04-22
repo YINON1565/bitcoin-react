@@ -18,7 +18,7 @@ export default class Input extends Component {
         const {name} = this.props
         return (
             <form>
-                <h3>{name.charAt(0).toUpperCase() + name.substring(1) + ': '}</h3>
+                {/* <h3>{name.charAt(0).toUpperCase() + name.substring(1) + ': '}</h3> */}
                 <input
                     type="text"
                     placeholder={name.charAt(0).toUpperCase() + name.substring(1) + '...'}

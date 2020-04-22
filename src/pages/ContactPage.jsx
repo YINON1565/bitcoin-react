@@ -33,15 +33,18 @@ export default class ContactPage extends Component {
     render() {
         const { contacts } = this.state
         return (
-            <div>
+            <div className="contact-page width-container">
                 <ContactFilter
                     filterBy={this.state.filterBy}
                     onFilter={this.onFilterHandler}
                 />
-                <ContactList contacts={contacts} />
-                <Link to="/contact/edit">
-                    <button >Add new contact</button>
+                <div className="width-container">
+                <Link  to="/contact/edit">
+                    <img className="add-contact-btn" src={require('../assets/svg/add-friend.svg')} alt="img"/>
+                    {/* <button >Add new contact</button> */}
                 </Link>
+                </div>
+                <ContactList contacts={contacts} />
             </div>
         )
     }

@@ -1,5 +1,5 @@
 // SETUP
-// @import 'setup/typography';
+@import 'setup/typography';
 @import 'setup/variables';
 @import 'setup/mixins';
 @import 'setup/functions';
@@ -9,7 +9,15 @@
 @import 'basics/layout';
 // PAGES
 @import 'pages/home-page';
+@import 'pages/contact-page';
+@import 'pages/contact-details';
+@import 'pages/contact-edit';
+@import 'pages/sign-up';
 // COMPONENTS
 @import 'components/nav-bar';
+@import 'components/conrtact-filter';
+@import 'components/contact-preview';
+@import 'components/contact-list';
+@import 'components/transfer-fund';
 // ANIMATIONS
 @import 'animations/fade';

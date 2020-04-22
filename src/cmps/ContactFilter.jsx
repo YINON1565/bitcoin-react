@@ -18,6 +18,7 @@ export default class ContactFilter extends Component {
         return (
             <form>
                 <input
+                    className="input-filter"
                     type="text"
                     placeholder="Search"
                     onChange={this.onChangeHandler}

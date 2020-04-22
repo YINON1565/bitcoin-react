@@ -1,0 +1,22 @@
+.contact-page {
+    div {
+        position: fixed;
+        height: 0;
+        bottom: 20px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0 20px;
+        .add-contact-btn {
+            // position: absolute;
+            // background-color: $clr2;
+            padding: 15px;
+            border-radius: 30%;
+            transition: background-color .3s, box-shadow .3s ;
+            &:hover {
+                box-shadow: 0px 0px 8px 0px $clr3;
+                background-color: $clr1;
+            }
+        }
+    }
+}

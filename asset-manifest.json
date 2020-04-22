@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/bitcoin-react/static/css/main.7f93b061.chunk.css",
+    "main.js": "/bitcoin-react/static/js/main.70b080be.chunk.js",
+    "main.js.map": "/bitcoin-react/static/js/main.70b080be.chunk.js.map",
+    "runtime-main.js": "/bitcoin-react/static/js/runtime-main.509ace64.js",
+    "runtime-main.js.map": "/bitcoin-react/static/js/runtime-main.509ace64.js.map",
+    "static/js/2.b30316ac.chunk.js": "/bitcoin-react/static/js/2.b30316ac.chunk.js",
+    "static/js/2.b30316ac.chunk.js.map": "/bitcoin-react/static/js/2.b30316ac.chunk.js.map",
+    "index.html": "/bitcoin-react/index.html",
+    "precache-manifest.28481ce92b489c8caf65ab95857c51a3.js": "/bitcoin-react/precache-manifest.28481ce92b489c8caf65ab95857c51a3.js",
+    "service-worker.js": "/bitcoin-react/service-worker.js",
+    "static/css/main.7f93b061.chunk.css.map": "/bitcoin-react/static/css/main.7f93b061.chunk.css.map",
+    "static/js/2.b30316ac.chunk.js.LICENSE.txt": "/bitcoin-react/static/js/2.b30316ac.chunk.js.LICENSE.txt",
+    "static/media/global.scss": "/bitcoin-react/static/media/CinzelDecorative-Regular.56a9d689.ttf",
+    "static/media/add-friend.svg": "/bitcoin-react/static/media/add-friend.b87db7b0.svg",
+    "static/media/bin.svg": "/bitcoin-react/static/media/bin.94e3636b.svg",
+    "static/media/bitcoin-logo.svg": "/bitcoin-react/static/media/bitcoin-logo.fe0aee18.svg",
+    "static/media/bitcoin.svg": "/bitcoin-react/static/media/bitcoin.8a47121e.svg",
+    "static/media/go-back.svg": "/bitcoin-react/static/media/go-back.d79c9bba.svg",
+    "static/media/homepage.svg": "/bitcoin-react/static/media/homepage.b0b63901.svg",
+    "static/media/line-chart.svg": "/bitcoin-react/static/media/line-chart.4286fb8c.svg",
+    "static/media/loading.svg": "/bitcoin-react/static/media/loading.772a34ce.svg",
+    "static/media/log-in.svg": "/bitcoin-react/static/media/log-in.b9ed2e38.svg",
+    "static/media/pen.svg": "/bitcoin-react/static/media/pen.9b27cd33.svg",
+    "static/media/send.svg": "/bitcoin-react/static/media/send.8f1410b1.svg",
+    "static/media/user.svg": "/bitcoin-react/static/media/user.0efa1f2c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.509ace64.js",
+    "static/js/2.b30316ac.chunk.js",
+    "static/css/main.7f93b061.chunk.css",
+    "static/js/main.70b080be.chunk.js"
+  ]
+}

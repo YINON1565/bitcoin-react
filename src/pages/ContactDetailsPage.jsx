@@ -12,32 +12,48 @@ export default class ContactDetailsPage extends Component {
     state = {
         contact: null,
         user: {},
-         rate: null
+        rate: null
     };
-
+    constructor(props) {
+        super(props)
+        this.myRef = React.createRef()
+    }
+    // In componentDidMount:
+    //(Or wherever you need the element)
+    // In render method:
     async componentDidMount() {
+        // this.someInputRef.current.focus()
         const id = this.props.match.params.id;
         const contact = await ContactService.getContactById(id);
-        this.setState({ contact, user: UserService.getUser(), rate: BitcoinService.getRate() });
+        this.setState({ contact, user: UserService.getUser() });
+        this.getRate()
     }
-
+    getRate = async () => {
+        var rate = await BitcoinService.getRate()
+        this.setState({ rate: rate })
+    }
     onTransferCoins = (amount) => {
-        console.log(amount, 'amount');
         const user = UserService.addMove(this.state.contact, amount)
         this.setState({ user })
+        console.log(this.myRef);
+        
+        window.scrollTo(0, this.myRef.current.offsetTop)
     }
 
     render() {
         var formatter = new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD',
-          });
+        });
         const { contact, user, rate } = this.state
         if (!contact) {
             return <img src={require('../assets/svg/loading.svg')} alt="Loading" />
         }
-        const moves = user.moves.filter(move => move.toId === this.state.contact._id)
-        moves.map(move=> move.formatUSD = formatter.format(move.amount * (1 / rate)))
+        var moves
+        if (rate) {
+            moves = user.moves.filter(move => move.toId === this.state.contact._id)
+            moves.map(move => move.formatUSD = formatter.format(move.amount * (1 / rate)))
+        }
 
 
         return (
@@ -45,10 +61,10 @@ export default class ContactDetailsPage extends Component {
                 <div className="contact-details-inside flex a-center evenly">
                     <div className="link-container flex a-center bet">
                         <Link to="/contact">
-                            <img  src={require('../assets/svg/go-back.svg')} alt="↻" title="Go to list"/> 
+                            <img src={require('../assets/svg/go-back.svg')} alt="↻" title="Go to list" />
                         </Link>
                         <Link to={'/contact/edit/' + contact._id}>
-                            <img  src={require('../assets/svg/pen.svg')} alt="✏" title="Edit contact"/>
+                            <img src={require('../assets/svg/pen.svg')} alt="✏" title="Edit contact" />
                         </Link>
                     </div>
                     <img
@@ -63,7 +79,7 @@ export default class ContactDetailsPage extends Component {
                     </ul>
                 </div>
                 <TransferFund contact={contact} maxCoins={user.coins} onTransferCoins={this.onTransferCoins} />
-                {moves && moves.length ? <MovesList title={false} moves={moves} /> : <h3 className="msg-no-action">No actions were taken into account</h3>}
+                {moves && moves.length ? <MovesList refProp={this.myRef} title={false} moves={moves} /> : <h3 className="msg-no-action">No actions were taken into account</h3>}
 
             </div>
         )

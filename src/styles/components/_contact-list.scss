@@ -1,7 +1,7 @@
 .contact-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: rem(3.5px);
+    gap: rem(1.5px);
     // max-width: 500px;
     margin: 0 auto;
     padding: 0 rem(5px);

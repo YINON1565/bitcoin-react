@@ -7,33 +7,14 @@
     justify-content: center;
     // background-color: lighten($clr2, 50%);
    
-
-    .bitcoin-img {
-    background-image: linear-gradient(-86deg, $clr2 0%, $clr4 100%);
-    border-radius: 100%;
-    filter: grayscale(0.3);
-    mix-blend-mode: multiply;
-        &svg {
-        }
-        height: 35vmin;
-        pointer-events: none;
-      }
-
-    @media (prefers-reduced-motion: no-preference) {
-        .bitcoin-img {
-          animation: bitcoin-img-spin infinite 4s linear;
-        }
-      }
-    @keyframes bitcoin-img-spin {
-        from {
-          transform: rotateY(0deg);
-        }
-        to {
-          transform: rotateY(360deg);
-        }
-      }
-
-      h2 {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+    
+    h2 {
         font-size: rem(30px);
         font-weight: 700;
       }
@@ -42,3 +23,28 @@
         margin-bottom: rem(15px);
       }
 }
+
+.bitcoin-img {
+background-image: linear-gradient(-86deg, $clr2 0%, $clr4 100%);
+border-radius: 100%;
+filter: grayscale(0.3);
+mix-blend-mode: multiply;
+    &svg {
+    }
+    height: 35vmin;
+    pointer-events: none;
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+    .bitcoin-img {
+      animation: bitcoin-img-spin infinite 4s linear;
+    }
+  }
+@keyframes bitcoin-img-spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }

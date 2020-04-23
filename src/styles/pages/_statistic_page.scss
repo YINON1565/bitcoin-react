@@ -1,0 +1,41 @@
+.chart-container {
+    display: grid;
+    gap: rem(80px);
+    margin-bottom: rem(30px);
+}
+
+.chart {
+    border-radius: 3px;
+    circle {
+        cursor: pointer;
+    }
+    g:first-child {
+        g {
+            text {
+                fill: $clr2;
+                // font-size: 14px;
+            }
+        }
+    }
+    rect {
+        fill: $clr3;
+    }
+    svg {
+        > rect {
+            fill: $clr2;
+        }
+
+    }
+    text {
+        // font-size: 16px;
+        fill: $clr5;
+    }
+    path {
+        stroke: $clr4;        
+    }   
+    g:last-child {
+        rect {
+            fill: $clr1;
+        }
+    }
+}

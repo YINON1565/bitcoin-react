@@ -1,4 +1,16 @@
 .home-page {
+    position: relative;
+    .bitcoin-img-container {
+        position: fixed;
+        top: 150px;
+        height: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 130px;
+        .bitcoin-img {
+        }
+    }
+   
     .container-inside {
         padding: 0 rem(10px);
         @include for-normal-layout {
@@ -10,8 +22,14 @@
             &.title {
                 margin-bottom: rem(8px);
             }
+            
         }
-
+        .msg-no-action {
+            width: 100%;
+            font-size: 30px;
+            color: $clrTitle;
+            margin-top: rem(80px);
+        }
         .current-btc {
             p {
                 font-family: BalooBhai2;
@@ -41,4 +59,5 @@
                 }
         }
     }
+
 }

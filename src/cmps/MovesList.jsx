@@ -1,6 +1,7 @@
 import React from 'react'
 
 import MovePreview from './MovePreview'
+import ChartForMoves from './ChartForMoves';
 
 // function MovesList(moves) {
 //     return (
@@ -26,6 +27,7 @@ export default (props) => {
             <MovePreview title={props.title} move={move} />
           </li>
         ))}
+        <ChartForMoves refProp={props.refProp} allMoves={props.moves}/>  
       </div>
     </div>
   );

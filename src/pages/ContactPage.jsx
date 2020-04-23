@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 import { ContactService } from '../services/ContactService'
+import { UserService } from '../services/UserService'
 
 import ContactList from '../cmps/ContactList'
 import ContactFilter from '../cmps/ContactFilter'
 
 export default class ContactPage extends Component {
-    async componentDidMount() {
+    componentDidMount() {
+        var user = UserService.getUser()
+        if (!user) this.props.history.push('/signup')
         this.loadContacts();
     }
     loadContacts = async () => {

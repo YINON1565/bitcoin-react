@@ -73,7 +73,7 @@ export default class ContactEditPage extends Component {
                         name="phone"
                         onInput={this.onInputHandler}
                     />
-                    <button onClick={this.saveContact}>Save</button>
+                        <button onClick={this.saveContact}>Save</button>
                 </div>
             </div>
         )

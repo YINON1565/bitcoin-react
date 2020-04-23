@@ -7,6 +7,19 @@ export default class SignupPage extends Component {
     setName = (ev) => {
         this.setState({ name: ev.target.value })
     }
+    signUp = async (event) => {
+        // console.log(event.key);
+        
+        var user = await UserService.signUp(this.state.name)
+        if (user) this.props.history.push('/')
+    }
+    handleKeyPress = (event) => {
+        console.log('hi');
+        
+        if(event.key === 'Enter'){
+          console.log('enter press here! ')
+        }
+      }
     render() {
         return (
             <div className="sign-up">
@@ -14,10 +27,10 @@ export default class SignupPage extends Component {
                 {/* <img className="gif-img" src={require('../assets/gif/tenor1.gif')} alt="" /> */}
 
                 <h2>Please enter your name</h2>
-                <input value={this.state.name} type="text" onChange={this.setName} placeholder="Your name.."/>
-                <button onClick={() => {
-                    UserService.signUp(this.state.name)
-                }}>Sign-up</button>
+                <form>
+                    <input value={this.state.name} required type="text" onChange={this.setName} placeholder="Your name.."/>
+                    <button onClick={this.signUp} type="submit"  onKeyPress={this.handleKeyPress}>Sign-up</button>
+                </form>
             </div>
         )
     }

@@ -1,4 +1,6 @@
 import React from 'react';
+// import Moment from 'react-moment';
+
 import { createBrowserHistory } from 'history';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 

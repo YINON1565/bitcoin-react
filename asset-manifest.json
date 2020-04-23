@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bitcoin-react/static/css/main.7f93b061.chunk.css",
-    "main.js": "/bitcoin-react/static/js/main.70b080be.chunk.js",
-    "main.js.map": "/bitcoin-react/static/js/main.70b080be.chunk.js.map",
+    "main.css": "/bitcoin-react/static/css/main.99576608.chunk.css",
+    "main.js": "/bitcoin-react/static/js/main.ab4a49b9.chunk.js",
+    "main.js.map": "/bitcoin-react/static/js/main.ab4a49b9.chunk.js.map",
     "runtime-main.js": "/bitcoin-react/static/js/runtime-main.509ace64.js",
     "runtime-main.js.map": "/bitcoin-react/static/js/runtime-main.509ace64.js.map",
-    "static/js/2.b30316ac.chunk.js": "/bitcoin-react/static/js/2.b30316ac.chunk.js",
-    "static/js/2.b30316ac.chunk.js.map": "/bitcoin-react/static/js/2.b30316ac.chunk.js.map",
+    "static/js/2.cf248166.chunk.js": "/bitcoin-react/static/js/2.cf248166.chunk.js",
+    "static/js/2.cf248166.chunk.js.map": "/bitcoin-react/static/js/2.cf248166.chunk.js.map",
     "index.html": "/bitcoin-react/index.html",
-    "precache-manifest.28481ce92b489c8caf65ab95857c51a3.js": "/bitcoin-react/precache-manifest.28481ce92b489c8caf65ab95857c51a3.js",
+    "precache-manifest.5907ccf75b0c06bada8b074bd667bb9f.js": "/bitcoin-react/precache-manifest.5907ccf75b0c06bada8b074bd667bb9f.js",
     "service-worker.js": "/bitcoin-react/service-worker.js",
-    "static/css/main.7f93b061.chunk.css.map": "/bitcoin-react/static/css/main.7f93b061.chunk.css.map",
-    "static/js/2.b30316ac.chunk.js.LICENSE.txt": "/bitcoin-react/static/js/2.b30316ac.chunk.js.LICENSE.txt",
+    "static/css/main.99576608.chunk.css.map": "/bitcoin-react/static/css/main.99576608.chunk.css.map",
+    "static/js/2.cf248166.chunk.js.LICENSE.txt": "/bitcoin-react/static/js/2.cf248166.chunk.js.LICENSE.txt",
     "static/media/global.scss": "/bitcoin-react/static/media/CinzelDecorative-Regular.56a9d689.ttf",
     "static/media/add-friend.svg": "/bitcoin-react/static/media/add-friend.b87db7b0.svg",
     "static/media/bin.svg": "/bitcoin-react/static/media/bin.94e3636b.svg",
@@ -28,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.509ace64.js",
-    "static/js/2.b30316ac.chunk.js",
-    "static/css/main.7f93b061.chunk.css",
-    "static/js/main.70b080be.chunk.js"
+    "static/js/2.cf248166.chunk.js",
+    "static/css/main.99576608.chunk.css",
+    "static/js/main.ab4a49b9.chunk.js"
   ]
 }

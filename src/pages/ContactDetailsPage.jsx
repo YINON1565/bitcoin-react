@@ -19,7 +19,7 @@ export default class ContactDetailsPage extends Component {
         this.myRef = React.createRef()
     }
     async componentDidMount() {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
         const id = this.props.match.params.id;
         const contact = await ContactService.getContactById(id);
         this.setState({ contact, user: UserService.getUser() });
@@ -64,7 +64,9 @@ export default class ContactDetailsPage extends Component {
                     </div>
                     <img
                         className="avatar avatar-l"
-                        src={`https://robohash.org/${contact.name}.png`}
+                        src={`http://robohash.org/${contact.name}.png`}
+                        onError={(e) => { e.target.onerror = null; e.target.src = `${require("../assets/svg/user-profile.svg")}` }}
+                        // onError={(e)=>{e.target.onerror = null; e.target.src=`http://robohash.org/${contact.name}.png`}}
                         alt=""
                     />
                     <ul className="contact-details">

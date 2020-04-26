@@ -7,7 +7,7 @@ export default class ContactEditPage extends Component {
     state = { contact: { name: '', email: '', phone: '' } }
 
     async componentDidMount() {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
         const id = this.props.match.params.id;
         if (id) {
             const contact = await ContactService.getContactById(id);
@@ -49,13 +49,15 @@ export default class ContactEditPage extends Component {
                     <img onClick={this.onGoBack} src={require('../assets/svg/go-back.svg')} alt="↻" title="Go Back" />
                     {
                         (this.state.contact._id) ?
-                        <img onClick={() => this.onRemoveContantHandler(this.state.contact._id)} src={require('../assets/svg/bin.svg')} alt="🗑" title="Delete Contant" />
-                        : ''
+                            <img onClick={() => this.onRemoveContantHandler(this.state.contact._id)} src={require('../assets/svg/bin.svg')} alt="🗑" title="Delete Contant" />
+                            : ''
                     }
                 </div>
                 <img
                     className="avatar avatar-l"
-                    src={`https://robohash.org/${name}.png`}
+                    src={`http://robohash.org/${name}.png`}
+                    onError={(e) => { e.target.onerror = null; e.target.src = `${require("../assets/svg/user-profile.svg")}` }}
+                    // onError={(e)=>{e.target.onerror = null; e.target.src=`http://robohash.org/${name}.png`}}
                     alt=""
                 />
                 <div className="input-containet">
@@ -74,7 +76,7 @@ export default class ContactEditPage extends Component {
                         name="phone"
                         onInput={this.onInputHandler}
                     />
-                        <button onClick={this.saveContact}>Save</button>
+                    <button onClick={this.saveContact}>Save</button>
                 </div>
             </div>
         )

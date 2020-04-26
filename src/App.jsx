@@ -22,20 +22,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div className="screen"></div>
-      <Router history={history}>
-        <NavBar/>
-        <main>
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/contact" exact component={ContactPage} />
-            <Route path="/contact/edit/:id?" component={ContactEditPage} />
-            <Route path="/contact/:id" component={ContactDetailsPage} />
-            <Route path="/statistic" component={StatisticPage} />
-            <Route path="/signup" component={SignupPage} />
-          </Switch>
-        </main>
-      </Router>
+        <div className="screen"></div>
+        <Router history={history}>
+          <NavBar />
+          <main>
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/contact" exact component={ContactPage} />
+              <Route path="/contact/edit/:id?" component={ContactEditPage} />
+              <Route path="/contact/:id" component={ContactDetailsPage} />
+              <Route path="/statistic" component={StatisticPage} />
+              <Route path="/signup" component={SignupPage} />
+            </Switch>
+          </main>
+        </Router>
       </header>
     </div>
   );

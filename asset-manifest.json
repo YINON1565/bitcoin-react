@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bitcoin-react/static/css/main.5da40d25.chunk.css",
-    "main.js": "/bitcoin-react/static/js/main.2042d589.chunk.js",
-    "main.js.map": "/bitcoin-react/static/js/main.2042d589.chunk.js.map",
+    "main.css": "/bitcoin-react/static/css/main.5331d5f3.chunk.css",
+    "main.js": "/bitcoin-react/static/js/main.8cb3921f.chunk.js",
+    "main.js.map": "/bitcoin-react/static/js/main.8cb3921f.chunk.js.map",
     "runtime-main.js": "/bitcoin-react/static/js/runtime-main.509ace64.js",
     "runtime-main.js.map": "/bitcoin-react/static/js/runtime-main.509ace64.js.map",
-    "static/js/2.cf248166.chunk.js": "/bitcoin-react/static/js/2.cf248166.chunk.js",
-    "static/js/2.cf248166.chunk.js.map": "/bitcoin-react/static/js/2.cf248166.chunk.js.map",
+    "static/js/2.93939f69.chunk.js": "/bitcoin-react/static/js/2.93939f69.chunk.js",
+    "static/js/2.93939f69.chunk.js.map": "/bitcoin-react/static/js/2.93939f69.chunk.js.map",
     "index.html": "/bitcoin-react/index.html",
-    "precache-manifest.a8bcf80f41613d9625eee21b05900a57.js": "/bitcoin-react/precache-manifest.a8bcf80f41613d9625eee21b05900a57.js",
+    "precache-manifest.6633f8765ee2f14d6ae2ab56d2a2bc27.js": "/bitcoin-react/precache-manifest.6633f8765ee2f14d6ae2ab56d2a2bc27.js",
     "service-worker.js": "/bitcoin-react/service-worker.js",
-    "static/css/main.5da40d25.chunk.css.map": "/bitcoin-react/static/css/main.5da40d25.chunk.css.map",
-    "static/js/2.cf248166.chunk.js.LICENSE.txt": "/bitcoin-react/static/js/2.cf248166.chunk.js.LICENSE.txt",
+    "static/css/main.5331d5f3.chunk.css.map": "/bitcoin-react/static/css/main.5331d5f3.chunk.css.map",
+    "static/js/2.93939f69.chunk.js.LICENSE.txt": "/bitcoin-react/static/js/2.93939f69.chunk.js.LICENSE.txt",
     "static/media/global.scss": "/bitcoin-react/static/media/eurof35.8a2b42eb.ttf",
     "static/media/add-friend.svg": "/bitcoin-react/static/media/add-friend.b87db7b0.svg",
     "static/media/bin.svg": "/bitcoin-react/static/media/bin.94e3636b.svg",
@@ -26,12 +26,13 @@
     "static/media/menu.svg": "/bitcoin-react/static/media/menu.363a82dc.svg",
     "static/media/pen.svg": "/bitcoin-react/static/media/pen.9b27cd33.svg",
     "static/media/send.svg": "/bitcoin-react/static/media/send.8f1410b1.svg",
+    "static/media/user-profile.svg": "/bitcoin-react/static/media/user-profile.0572a77f.svg",
     "static/media/user.svg": "/bitcoin-react/static/media/user.0efa1f2c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.509ace64.js",
-    "static/js/2.cf248166.chunk.js",
-    "static/css/main.5da40d25.chunk.css",
-    "static/js/main.2042d589.chunk.js"
+    "static/js/2.93939f69.chunk.js",
+    "static/css/main.5331d5f3.chunk.css",
+    "static/js/main.8cb3921f.chunk.js"
   ]
 }

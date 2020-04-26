@@ -7,12 +7,23 @@ export default class ContactEditPage extends Component {
     state = { contact: { name: '', email: '', phone: '' } }
 
     async componentDidMount() {
+        document.addEventListener("keydown", this.handlePress)
         window.scrollTo(0, 0)
         const id = this.props.match.params.id;
         if (id) {
             const contact = await ContactService.getContactById(id);
             this.setState({ contact });
         }
+    }
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.handlePress)
+    }
+    handlePress = (event) => {
+        if (event.keyCode === 13) {
+            this.saveContact()
+        }
+        if (event.keyCode === 27) {
+            this.props.history.go(-1)        }
     }
 
     onInputHandler = (value) => {

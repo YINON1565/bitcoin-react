@@ -24,10 +24,10 @@ export default class NavBar extends Component {
     document.addEventListener("keydown", this.handlePress)
   }
   componentWillUnmount() {
-    document.removeEventListener("click", this.handleClick)
-    document.removeEventListener("keydown", this.handlePress)
     window.removeEventListener('offline', (e) => { this.setState({isOnLine: false}) });
     window.removeEventListener('online', (e) => { this.setState({isOnLine: true}) });
+    document.removeEventListener("click", this.handleClick)
+    document.removeEventListener("keydown", this.handlePress)
   }
   setId = (id) => {
     this.setState({ id});

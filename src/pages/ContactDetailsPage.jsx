@@ -25,14 +25,19 @@ export default class ContactDetailsPage extends Component {
         this.setState({ contact, user: UserService.getUser() });
         this.getRate()
     }
+    
     getRate = async () => {
         var rate = await BitcoinService.getRate()
         this.setState({ rate: rate })
     }
     onTransferCoins = (amount) => {
+        if (amount <= 0 || amount > this.state.user.coins) return
         const user = UserService.addMove(this.state.contact, amount)
         this.setState({ user })
-        window.scrollTo(0, (this.myRef.current.offsetTop + this.myRef.current.offsetHeight))
+        if (this.myRef.current) {
+            window.scrollTo(0, (this.myRef.current.offsetTop + this.myRef.current.offsetHeight))
+
+        }
     }
 
     render() {

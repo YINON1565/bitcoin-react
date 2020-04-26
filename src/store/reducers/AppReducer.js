@@ -10,6 +10,12 @@ export default function AppReducer(state = initialState, action) {
         ...state,
         counter: state.counter + 1
       }
+    case 'SET_MSG':
+      return {
+        ...state,
+        msg: state.msg
+        // counter: state.counter + 1
+      }
     default:
       return state;
   }

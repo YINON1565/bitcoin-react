@@ -8,7 +8,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   // users: UserReducer,
-  robot: RobotReducer,
+  // robot: RobotReducer,
   app: AppReducer
 })
 

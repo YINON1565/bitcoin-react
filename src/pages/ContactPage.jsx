@@ -9,6 +9,7 @@ import ContactFilter from '../cmps/ContactFilter'
 
 export default class ContactPage extends Component {
     componentDidMount() {
+        window.scrollTo(0,0)
         var user = UserService.getUser()
         if (!user) this.props.history.push('/signup')
         this.loadContacts();

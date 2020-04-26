@@ -1,23 +1,33 @@
 .contact-edit {
     margin-top: 20px;
     padding: 0 rem(10px);
+    height: rem(650px);
+    @include for-small-normal-layout {
+        flex-direction: row;
+        height: rem(600px);
+    }
     @include for-normal-layout {
         padding: 0;
     }
     
         margin: 0 auto;
         // width: rem(700px);
-        height: rem(600px);
         position: relative;
         .avatar {
             background-color: $clr2;
         }
         .btn-side-container {
             position: absolute;
+            right: 0;
             top: rem(50px);
-            height: 0;
+            height: 165px;
             padding: 0 9%;
-            width: 100%;
+            width: fit-content;
+            @include for-small-normal-layout {
+                height: 0;
+                flex-direction: row;
+                width: 100%;
+            }
             > * {
                 cursor: pointer;
                 background-color: $clrBtn;

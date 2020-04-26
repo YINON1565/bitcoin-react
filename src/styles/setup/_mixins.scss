@@ -22,6 +22,11 @@
   }
 }
 
+@mixin for-small-normal-layout {
+  @media (min-width: $break-small-normal) {
+    @content;
+  }
+}
 @mixin for-normal-layout {
   @media (min-width: $break-normal) {
     @content;

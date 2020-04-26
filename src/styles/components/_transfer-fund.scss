@@ -3,15 +3,24 @@
     background-color: $clr2;
     padding: rem(20px) rem(30px);
     div {
-        
+        // width: auto;
+        @include for-normal-layout {
+            width: fit-content;
+        }
         border-radius: 3px;
-        width: fit-content;
         h2 {
+            text-align: center;
+            @include for-mobile-layout {
+                text-align: start;
+            }
             span {
                 color: $clr5;
             }
         }
         div {
+            @include for-mobile-layout {
+                flex-direction: row;
+            }
             width: 100%;
             input[type=number]::-webkit-inner-spin-button, 
             input[type=number]::-webkit-outer-spin-button { 
@@ -26,6 +35,7 @@
                 border-bottom-right-radius: 0;
                 border-top-left-radius: 3px;
                 border-bottom-left-radius: 3px;
+                margin-bottom: 6px;
                 &:hover {
                     background-color: $clr3;
                 }

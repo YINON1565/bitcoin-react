@@ -7,6 +7,7 @@ export default class ContactEditPage extends Component {
     state = { contact: { name: '', email: '', phone: '' } }
 
     async componentDidMount() {
+        window.scrollTo(0,0)
         const id = this.props.match.params.id;
         if (id) {
             const contact = await ContactService.getContactById(id);
@@ -43,8 +44,8 @@ export default class ContactEditPage extends Component {
     render() {
         const { name, email, phone } = this.state.contact;
         return (
-            <div className="contact-edit width-container flex a-center evenly">
-                <div className="btn-side-container flex a-center bet">
+            <div className="contact-edit width-container flex col a-center evenly">
+                <div className="btn-side-container flex col a-center bet">
                     <img onClick={this.onGoBack} src={require('../assets/svg/go-back.svg')} alt="↻" title="Go Back" />
                     {
                         (this.state.contact._id) ?

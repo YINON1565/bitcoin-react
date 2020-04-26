@@ -18,7 +18,7 @@ export default class TransferFund extends Component {
             <div className="transfer-fund">
                 <div>
                     <h2 className="text-light">Transfer coin to <span>{contact.name}</span>:</h2>
-                    <div className="flex">
+                    <div className="flex col">
                         <input type="number" value={this.state.amount} onChange={this.setAmount} min="0" max={maxCoins} />
                         <button className="btn-send flex bet a-center" onClick={() => {
                             this.props.onTransferCoins(this.state.amount)

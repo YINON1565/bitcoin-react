@@ -4,6 +4,9 @@ import { UserService } from '../services/UserService'
 
 export default class SignupPage extends Component {
     state = { name: '' }
+    componentDidMount() {
+        window.scrollTo(0,0)
+    }
     setName = (ev) => {
         this.setState({ name: ev.target.value })
     }

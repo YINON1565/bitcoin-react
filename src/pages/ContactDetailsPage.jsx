@@ -22,6 +22,7 @@ export default class ContactDetailsPage extends Component {
     //(Or wherever you need the element)
     // In render method:
     async componentDidMount() {
+        window.scrollTo(0,0)
         // this.someInputRef.current.focus()
         const id = this.props.match.params.id;
         const contact = await ContactService.getContactById(id);
@@ -35,9 +36,7 @@ export default class ContactDetailsPage extends Component {
     onTransferCoins = (amount) => {
         const user = UserService.addMove(this.state.contact, amount)
         this.setState({ user })
-        console.log(this.myRef);
-        
-        window.scrollTo(0, this.myRef.current.offsetTop)
+        window.scrollTo(0, (this.myRef.current.offsetTop + this.myRef.current.offsetHeight))
     }
 
     render() {
@@ -58,8 +57,8 @@ export default class ContactDetailsPage extends Component {
 
         return (
             <div className="contact-details width-container">
-                <div className="contact-details-inside flex a-center evenly">
-                    <div className="link-container flex a-center bet">
+                <div className="contact-details-inside flex col a-center evenly">
+                    <div className="link-container flex col a-center bet">
                         <Link to="/contact">
                             <img src={require('../assets/svg/go-back.svg')} alt="↻" title="Go to list" />
                         </Link>

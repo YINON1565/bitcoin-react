@@ -17,13 +17,15 @@
             background-color: $clr2;
         }
         .btn-side-container {
-            position: absolute;
+            position: fixed;
+            top: rem(120px);
             right: 0;
-            top: rem(50px);
             height: 165px;
             padding: 0 9%;
             width: fit-content;
-            @include for-small-normal-layout {
+            @include for-medium-mobile-layout {
+                position: absolute;                
+                top: rem(50px);
                 height: 0;
                 flex-direction: row;
                 width: 100%;
@@ -34,8 +36,8 @@
                 display: flex;
                 align-self: center;
                 justify-content: center;
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
                 padding: 15px;
                 border-radius: 50%;
                 transition: background-color .3s ;

@@ -3,17 +3,26 @@ import { NavLink, Link } from 'react-router-dom';
 
 
 export default class NavBar extends Component {
-  state = { isOn: false }
+  state = { isOn: false, id: null }
   constructor(props) {
     super(props);
+    console.log(this.props);
+    
   }
   componentDidMount() {
+    // const id = this.props.match.params.id;
+    console.log(this.props);
+    // this.setId(id)
+
     document.addEventListener("click", this.handleClick)
     document.addEventListener("keydown", this.handlePress)
   }
   componentWillUnmount() {
     document.removeEventListener("click", this.handleClick)
     document.removeEventListener("keydown", this.handlePress)
+  }
+  setId = (id) => {
+    this.setState({ id});
   }
   handleClick = (event) => {
     if (!this.state.isOn) return
@@ -33,6 +42,7 @@ export default class NavBar extends Component {
   render() {
     const { isOn } = this.state
     const isOpen = isOn ? ' isOpen' : '';
+
     return (
       <div className="nav-bar-container">
         <nav className="width-container nav-bar flex bet">

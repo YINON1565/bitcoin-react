@@ -18,12 +18,8 @@ export default class ContactDetailsPage extends Component {
         super(props)
         this.myRef = React.createRef()
     }
-    // In componentDidMount:
-    //(Or wherever you need the element)
-    // In render method:
     async componentDidMount() {
         window.scrollTo(0,0)
-        // this.someInputRef.current.focus()
         const id = this.props.match.params.id;
         const contact = await ContactService.getContactById(id);
         this.setState({ contact, user: UserService.getUser() });

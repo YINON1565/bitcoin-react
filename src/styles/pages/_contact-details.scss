@@ -40,16 +40,16 @@
                 padding: 0 9%;
             }
             > * {
-                background-color: none;
-                &:hover {
-                    background-color: $clr3;
-                }
-                @include for-narrow-layout {
+                // background-color: none;
+                // &:hover {
+                //     background-color: $clr3;
+                // }
+                // @include for-narrow-layout {
                     background-color: $clrBtn;
                     &:hover {
                         background-color: $clrBtnHover;
                     }
-                }
+                // }
                 display: flex;
                 align-self: center;
                 justify-content: center;

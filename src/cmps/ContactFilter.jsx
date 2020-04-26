@@ -21,7 +21,6 @@ export default class ContactFilter extends Component {
                     className="input-filter"
                     type="search"
                     placeholder="Search"
-                    autoComplete
                     onChange={this.onChangeHandler}
                     name="term"
                     value={this.state.term}

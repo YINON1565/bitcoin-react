@@ -64,7 +64,7 @@ export default class ContactDetailsPage extends Component {
                     </div>
                     <img
                         className="avatar avatar-l"
-                        src={`http://robohash.org/${contact.name}.png`}
+                        src={`https://robohash.org/${contact.name}.png`}
                         onError={(e) => { e.target.onerror = null; e.target.src = `${require("../assets/svg/user-profile.svg")}` }}
                         // onError={(e)=>{e.target.onerror = null; e.target.src=`http://robohash.org/${contact.name}.png`}}
                         alt=""

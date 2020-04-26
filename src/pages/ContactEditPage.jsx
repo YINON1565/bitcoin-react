@@ -55,7 +55,7 @@ export default class ContactEditPage extends Component {
                 </div>
                 <img
                     className="avatar avatar-l"
-                    src={`http://robohash.org/${name}.png`}
+                    src={`https://robohash.org/${name}.png`}
                     onError={(e) => { e.target.onerror = null; e.target.src = `${require("../assets/svg/user-profile.svg")}` }}
                     // onError={(e)=>{e.target.onerror = null; e.target.src=`http://robohash.org/${name}.png`}}
                     alt=""

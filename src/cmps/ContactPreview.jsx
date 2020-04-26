@@ -6,7 +6,10 @@ function ContactPreview({ contact }) {
         <Link className="contact-preview flex a-center" to={'/contact/' + contact._id} key={contact._id}>
             <img
                 className="avatar avatar-s"
+                // (https?:\/\/)?([1-9]\d{0,3})\.website\.com\/.*type=abc.adv=abc1234 
                 src={`https://robohash.org/${contact.name}.png`}
+                // src={`https://robohash.org/${contact.name}.png`}
+                onError={(e)=>{e.target.onerror = null; e.target.src=`http://robohash.org/${contact.name}.png`}}
                 alt=""
             />
             <ul className="flex col j-center">

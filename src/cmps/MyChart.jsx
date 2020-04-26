@@ -9,7 +9,7 @@ export default class MyChart extends Component {
             title = value.description
             data = value.values.map(value => {
                 return [new Date(value.x * 1000),
-                value.y]
+                +value.y]
             })
             data.unshift([{ type: 'date', label: 'Time' },
             value.name])
